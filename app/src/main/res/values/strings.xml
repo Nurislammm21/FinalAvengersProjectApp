@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">FitnessAvengersApplication</string>
+    <string name="slogan">На пути к совершенству!</string>
+    <string name="day">День:</string>
+    <string name="exercise">упражнении</string>
+    <string name="exercises">упражнения</string>
+    <string name="waiting_message">Начало упражнений через: </string>
+    <string name="start">Начать</string>
+    <string name="next">Следующее</string>
+    <string name="done">Вы молодец успешно закончили</string>
+    <string name="finishDay">Успешно закончили этот день</string>
+    <string name="days">Дни тренировок</string>
+    <string name="waiting">Приготовтесь</string>
+    <string name="rest">Осталось:</string>
+    <string name="rest_days">дней</string>
+    <string name="reset">Сбросить</string>
+    <string name="warning">Внимание!</string>
+    <string name="cancel">отмена</string>
+    <string name="reset_days_message">Вы действительно хотите сбросить все дни тренировок?</string>
+    <string name="reset_day_message">Вы действительно хотите сбросить этот день и повторить упражнения?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
