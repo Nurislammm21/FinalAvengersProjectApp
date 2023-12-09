@@ -14,7 +14,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         timer = object : CountDownTimer(2500,1000){
             override fun onTick(p0: Long) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onFinish() {

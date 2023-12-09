@@ -1,9 +1,21 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.FitnessAvengersApplication" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.FitnessAvengersApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/blueDark</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="Theme.FitnessAvengersApplication" parent="Base.Theme.FitnessAvengersApplication" />
+
+
+    <style name="Base.Theme.Splash" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
+    <style name="Theme.Splash" parent="Base.Theme.Splash" />
 </resources>
