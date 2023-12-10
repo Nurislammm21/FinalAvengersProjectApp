@@ -15,11 +15,13 @@ import com.example.fitnessavengersapplication.adapters.DayModel
 import com.example.fitnessavengersapplication.adapters.DaysAdapter
 import com.example.fitnessavengersapplication.adapters.ExerciseModel
 import com.example.fitnessavengersapplication.databinding.FragmentDaysBinding
+import com.example.fitnessavengersapplication.utils.MainViewModel
 
 
 class DaysFragment : Fragment(), DaysAdapter.Listener  {
     lateinit var binding : FragmentDaysBinding
     private var ab : ActionBar? = null
+    private val model : MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
