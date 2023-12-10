@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessavengersapplication.R
@@ -58,6 +59,6 @@ class DaysFragment : Fragment(), DaysAdapter.Listener  {
     }
 
     override fun onClick(day: DayModel) {
-
+        com.example.fitnessavengersapplication.utils.FragmentManager.setFragment(ExerciseListFragment.newInstance(),activity as AppCompatActivity)
     }
 }
