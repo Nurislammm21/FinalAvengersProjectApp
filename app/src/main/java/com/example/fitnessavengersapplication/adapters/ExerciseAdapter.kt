@@ -21,7 +21,7 @@ class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHold
         fun setData(exercise : ExerciseModel) = with(binding){
 
             txtName2.text = exercise.name
-             txtCount2.text = exercise.time
+            txtCount2.text = exercise.time
             chB.isChecked = exercise.isDone
             imEx.setImageDrawable(GifDrawable(root.context.assets, exercise.image))
 
@@ -39,7 +39,7 @@ class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHold
 
     class MyComparator : DiffUtil.ItemCallback<ExerciseModel>(){
         override fun areItemsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
-                return oldItem == newItem
+            return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {

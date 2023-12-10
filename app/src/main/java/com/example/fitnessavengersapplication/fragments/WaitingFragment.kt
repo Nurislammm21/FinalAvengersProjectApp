@@ -12,14 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.fitnessapp.R
-import com.example.fitnessapp.adapters.ExerciseAdapter
-import com.example.fitnessapp.databinding.FragmentExerciseListBinding
-import com.example.fitnessapp.databinding.WaitingFragmentBinding
-import com.example.fitnessapp.utils.MainViewModel
-import com.example.fitnessapp.utils.TimeUtils
 import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.databinding.WaitingFragmentBinding
+import com.example.fitnessavengersapplication.utils.TimeUtils
 
 const val COUNT_DOWN_TIME = 11000L
 class WaitingFragment : Fragment() {
@@ -55,7 +50,7 @@ class WaitingFragment : Fragment() {
             }
 
             override fun onFinish() {
-                        com.example.fitnessavengersapplication.utils.FragmentManager.setFragment(ExerciseFragment.newInstance(), activity as AppCompatActivity)
+                    //    com.example.fitnessavengersapplication.utils.FragmentManager.setFragment(ExerciseFragment.newInstance(), activity as AppCompatActivity)
             }
 
         }.start()
