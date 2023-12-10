@@ -10,7 +10,9 @@ import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.databinding.DaysListItemBinding
 
 
-class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.DayHolder>(MyComparator()) {
+class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.DayHolder>(MyComparator()){
+
+
     class DayHolder(view : View) : RecyclerView.ViewHolder(view){
         private val binding = DaysListItemBinding.bind(view)
 
@@ -20,8 +22,7 @@ class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.Da
             val exCounter = day.exercises.split(",").size.toString() + " " + root.context.getString(R.string.exercise)
             txtExCounter.text = exCounter
             checkBox.isChecked = day.isDone
-            itemView.setOnClickListener{listener.onClick(day)
-            }
+            itemView.setOnClickListener{listener.onClick(day.copy(dayNumber = adapterPosition + 1)) }
         }
     }
 
@@ -45,8 +46,9 @@ class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.Da
 
     }
 
-
+    // need new interface
     interface Listener{
         fun onClick(day : DayModel)
     }
+
 }

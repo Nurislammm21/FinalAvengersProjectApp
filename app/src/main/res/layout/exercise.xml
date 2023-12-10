@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C9F8F8">
+    android:background="@color/red">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Упражнение аты турад"
-                android:textColor="#1129C5"
+                android:textColor="#0A0B12"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:30"
-                android:textColor="#0C1C81"
+                android:textColor="#0A0B13"
                 android:textSize="54sp"
                 android:textStyle="bold" />
 
@@ -68,7 +68,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="7dp"
-                android:progressTint="#0F22A3"
+                android:progressTint="#0D0E15"
                 android:scaleY="3" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Томирис ЛОХ"
-                android:textColor="#0D2ED3"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
