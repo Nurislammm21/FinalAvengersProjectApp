@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.adapters.DayModel
 import com.example.fitnessavengersapplication.adapters.DaysAdapter
+import com.example.fitnessavengersapplication.adapters.ExerciseModel
 import com.example.fitnessavengersapplication.databinding.FragmentDaysBinding
 
 
@@ -50,6 +51,18 @@ class DaysFragment : Fragment(), DaysAdapter.Listener  {
 
         return tArray
 
+    }
+
+
+    private fun fillExerciseList(day : DayModel){
+        val tempList = ArrayList<ExerciseModel>()
+        day.exercises.split(",").forEach{
+            val exerciseList = resources.getStringArray(R.array.exercise)
+            val exercise = exerciseList[it.toInt()]
+            val exerciseArray = exercise.split("|")
+            tempList.add(ExerciseModel(exerciseArray[0],exerciseArray[1],false,exerciseArray[2]))
+        }
+        model.mutableListExercise.value = tempList
     }
 
     companion object {
