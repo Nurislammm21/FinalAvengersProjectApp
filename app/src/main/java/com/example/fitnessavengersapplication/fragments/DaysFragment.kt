@@ -15,7 +15,7 @@ import com.example.fitnessavengersapplication.adapters.DaysAdapter
 import com.example.fitnessavengersapplication.databinding.FragmentDaysBinding
 
 
-class DaysFragment : Fragment() {
+class DaysFragment : Fragment(), DaysAdapter.Listener  {
     lateinit var binding : FragmentDaysBinding
     private var ab : ActionBar? = null
 
@@ -29,11 +29,12 @@ class DaysFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initRcView()
     }
 
 
     private fun initRcView() = with(binding){
-        val adapter = DaysAdapter()
+        val adapter = DaysAdapter(this@DaysFragment)
         rcViewDays.adapter = adapter
         rcViewDays.layoutManager = LinearLayoutManager(activity as AppCompatActivity)
         adapter.submitList(fillDaysArray())
@@ -54,5 +55,9 @@ class DaysFragment : Fragment() {
 
         @JvmStatic
         fun newInstance() = DaysFragment()
+    }
+
+    override fun onClick(day: DayModel) {
+
     }
 }
