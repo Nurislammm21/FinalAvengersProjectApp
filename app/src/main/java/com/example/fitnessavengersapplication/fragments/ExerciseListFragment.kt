@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.activityViewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.adapters.ExerciseAdapter
 import com.example.fitnessavengersapplication.databinding.FragmentExerciseListBinding
@@ -29,7 +31,7 @@ class ExerciseListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+                init()
         model.mutableListExercise.observe(viewLifecycleOwner){
             for( i in 0 until model.getExerciseCount()){
                 it[i] = it[i].copy(isDone = true)
@@ -40,6 +42,14 @@ class ExerciseListFragment : Fragment() {
 
 
 
+        private fun init() = with(binding){
+            ab = (activity as AppCompatActivity).supportActionBar
+            ab?.title = getString(R.string.exercises)
+            adapter = ExerciseAdapter()
+            rcView.layoutManager = LinearLayoutManager(activity)
+            rcView.adapter = adapter
+
+        }
 
     companion object {
         @JvmStatic

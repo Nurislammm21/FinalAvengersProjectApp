@@ -5,4 +5,6 @@
 
     <color name="blue">#2D8FDA</color>
     <color name="blueDark">#0D436C</color>
+    <color name="background">#64B6F4</color>
+
 </resources>
