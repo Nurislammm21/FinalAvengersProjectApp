@@ -27,7 +27,7 @@ class WaitingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View{
       binding = WaitingFragmentBinding.inflate(inflater,container,false)
         return binding.root
     }
@@ -50,7 +50,7 @@ class WaitingFragment : Fragment() {
             }
 
             override fun onFinish() {
-                    //    com.example.fitnessavengersapplication.utils.FragmentManager.setFragment(ExerciseFragment.newInstance(), activity as AppCompatActivity)
+                       com.example.fitnessavengersapplication.utils.FragmentManager.setFragment(ExerciseFragment.newInstance(), activity as AppCompatActivity)
             }
 
         }.start()
