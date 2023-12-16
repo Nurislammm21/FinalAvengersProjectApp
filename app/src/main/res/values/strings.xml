@@ -9,7 +9,7 @@
     <string name="start">Начать</string>
     <string name="next">Следующее</string>
     <string name="done">Вы молодец успешно закончили</string>
-    <string name="finishDay">Успешно закончили этот день</string>
+    <string name="finishDay">You are completely finished</string>
     <string name="days">Дни тренировок</string>
     <string name="waiting">Приготовтесь</string>
     <string name="rest">Осталось:</string>

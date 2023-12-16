@@ -43,6 +43,9 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
     implementation 'androidx.fragment:fragment-ktx:1.6.1'
 
+    //lottie animation
+    implementation "com.airbnb.android:lottie:5.2.0"
+
     //hilt
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
