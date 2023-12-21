@@ -12,6 +12,7 @@ import com.example.fitnessavengersapplication.databinding.DaysListItemBinding
 
 class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.DayHolder>(MyComparator()){
     class DayHolder(view : View) : RecyclerView.ViewHolder(view){
+
         private val binding = DaysListItemBinding.bind(view)
         fun setData(day : DayModel, listener : Listener) = with(binding){
             val name = root.context.getString(R.string.day) + " ${adapterPosition + 1}"
