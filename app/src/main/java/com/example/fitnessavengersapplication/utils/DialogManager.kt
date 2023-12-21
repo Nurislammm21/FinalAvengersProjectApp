@@ -6,7 +6,6 @@ import com.example.fitnessavengersapplication.R
 
 
 object DialogManager {
-
     fun showDialog(context : Context, mId : Int, listener : Listener){
             val builder = AlertDialog.Builder(context)
         var dialog : AlertDialog? = null
@@ -23,12 +22,8 @@ object DialogManager {
         dialog.show()
 
     }
-
-
     interface Listener{
         fun onClick()
-
-
     }
 
 }

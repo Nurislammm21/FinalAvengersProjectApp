@@ -8,4 +8,5 @@ class HiltApplication : Application() {
     override fun onCreate() {
         super.onCreate()
     }
+    // do not finish this part of code and do not connect
 }

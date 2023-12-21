@@ -2,16 +2,12 @@ package com.example.fitnessavengersapplication.fragments
 
 import android.os.Bundle
 import android.os.CountDownTimer
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
 import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.databinding.WaitingFragmentBinding
 import com.example.fitnessavengersapplication.utils.TimeUtils
@@ -38,8 +34,6 @@ class WaitingFragment : Fragment() {
         ab?.title = getString(R.string.waiting)
         binding.pBar.max = COUNT_DOWN_TIME.toInt()
         startTimer()
-
-
     }
 
     private fun startTimer() = with(binding){

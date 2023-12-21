@@ -2,12 +2,12 @@ package com.example.fitnessavengersapplication.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.databinding.DayFinishBinding
 import com.example.fitnessavengersapplication.utils.FragmentManager
@@ -15,7 +15,6 @@ import pl.droidsonroids.gif.GifDrawable
 
 
 class DayFinishFragment : Fragment() {
-
  lateinit var binding : DayFinishBinding
     private var ab : ActionBar? = null
 
