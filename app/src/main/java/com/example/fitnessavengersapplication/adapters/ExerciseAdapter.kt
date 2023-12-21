@@ -11,18 +11,14 @@ import com.example.fitnessavengersapplication.databinding.ExerciseListItemBindin
 import pl.droidsonroids.gif.GifDrawable
 
 class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHolder>(ExerciseDiffUtil()){
-
     class ExerciseHolder(view : View) : RecyclerView.ViewHolder(view){
         private val binding = ExerciseListItemBinding.bind(view)
 
-
         fun setData(exercise : ExerciseModel) = with(binding){
-
             txtName2.text = exercise.name
             txtCount2.text = exercise.time
             chB.isChecked = exercise.isDone
             imEx.setImageDrawable(GifDrawable(root.context.assets, exercise.image))
-
         }
     }
 
@@ -43,8 +39,5 @@ class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHold
         override fun areContentsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
             return oldItem == newItem
         }
-
     }
-
-
 }

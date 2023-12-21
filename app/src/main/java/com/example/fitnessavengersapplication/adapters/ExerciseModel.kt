@@ -6,3 +6,4 @@ data class ExerciseModel(
     var isDone : Boolean,
     var image : String
 )
+// using data for push ups and all exercises

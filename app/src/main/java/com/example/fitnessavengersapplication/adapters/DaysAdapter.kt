@@ -11,11 +11,8 @@ import com.example.fitnessavengersapplication.databinding.DaysListItemBinding
 
 
 class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.DayHolder>(MyComparator()){
-
-
     class DayHolder(view : View) : RecyclerView.ViewHolder(view){
         private val binding = DaysListItemBinding.bind(view)
-
         fun setData(day : DayModel, listener : Listener) = with(binding){
             val name = root.context.getString(R.string.day) + " ${adapterPosition + 1}"
             txtName.text = name
@@ -25,7 +22,6 @@ class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.Da
             itemView.setOnClickListener{listener.onClick(day.copy(dayNumber = adapterPosition + 1)) }
         }
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DayHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.days_list_item,parent,false)
         return DayHolder(view)
@@ -45,10 +41,8 @@ class DaysAdapter(var listener : Listener) : ListAdapter<DayModel,DaysAdapter.Da
         }
 
     }
-
-    // need new interface
     interface Listener{
         fun onClick(day : DayModel)
     }
-
+ //sayazhan have to use
 }
