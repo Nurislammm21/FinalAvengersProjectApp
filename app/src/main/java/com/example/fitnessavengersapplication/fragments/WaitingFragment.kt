@@ -56,7 +56,6 @@ class WaitingFragment : Fragment() {
     }
 
     companion object {
-
         @JvmStatic
         fun newInstance() = WaitingFragment()
     }

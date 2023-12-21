@@ -56,7 +56,6 @@ class ExerciseListFragment : Fragment() {
 
 
     companion object {
-
         @JvmStatic
         fun newInstance() = ExerciseListFragment()
     }

@@ -20,7 +20,6 @@ object DialogManager {
         }
         dialog = builder.create()
         dialog.show()
-
     }
     interface Listener{
         fun onClick()

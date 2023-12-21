@@ -130,7 +130,7 @@ class ExerciseFragment : Fragment() {
 
 
     companion object {
-
+// companion object of newinstance
         @JvmStatic
         fun newInstance() = ExerciseFragment()
     }
