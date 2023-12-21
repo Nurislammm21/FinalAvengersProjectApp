@@ -3,7 +3,6 @@ package com.example.fitnessavengersapplication.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -11,8 +10,7 @@ import com.example.fitnessavengersapplication.R
 import com.example.fitnessavengersapplication.databinding.ExerciseListItemBinding
 import pl.droidsonroids.gif.GifDrawable
 
-class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHolder>(MyComparator()){
-
+class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHolder>(ExerciseDiffUtil()){
 
     class ExerciseHolder(view : View) : RecyclerView.ViewHolder(view){
         private val binding = ExerciseListItemBinding.bind(view)
@@ -37,7 +35,7 @@ class ExerciseAdapter() : ListAdapter<ExerciseModel,ExerciseAdapter.ExerciseHold
         holder.setData(getItem(position))
     }
 
-    class MyComparator : DiffUtil.ItemCallback<ExerciseModel>(){
+    class ExerciseDiffUtil : DiffUtil.ItemCallback<ExerciseModel>(){
         override fun areItemsTheSame(oldItem: ExerciseModel, newItem: ExerciseModel): Boolean {
             return oldItem == newItem
         }
